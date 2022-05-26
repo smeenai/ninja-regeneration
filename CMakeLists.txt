@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13.4)
 project(ninja-regeneration C)
 
-add_executable(generator generator.c)
+add_executable(generator generator.c f.c)
 add_custom_command(
   OUTPUT generated.cmake
   COMMAND $<TARGET_FILE:generator> > generated.cmake
